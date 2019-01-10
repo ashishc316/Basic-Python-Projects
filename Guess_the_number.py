@@ -14,7 +14,7 @@ while match == True:
     gen = rm.randint(1, 10)
     try:
         ans = int(input("Guess the number between 1 and 10 inclusive: "))
-        if ans in [1,10]:
+        if ans in list(range(1,11)):
             dif(ans, gen)
             if ans == gen:
                 print("Congratulations!! You guessed the correct number!")
@@ -24,8 +24,7 @@ while match == True:
 
     except ValueError:
         print("Invalid Input")
-    except ans > 100:
-        print("Input is greater than 100")
+    
 
 
 
